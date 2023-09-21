@@ -5,6 +5,7 @@ Bot for selling NFT on GetGems without commissions
 ```
 git clone https://github.com/shibdev/getgems-sale-bot
 cd getgems-sale-bot
+pip3 install -r requirements.txt
 mkdir connections
 mkdir images
 cp .env.example .env
