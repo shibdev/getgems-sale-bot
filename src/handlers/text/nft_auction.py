@@ -87,7 +87,7 @@ async def send_nft_auction_transaction(message: types.Message, state: FSMContext
                             .store_int(0, 32)\
                             .store_address(user_address)\
                             .store_coins(int(float(nft_min_bid) * 1e9))\
-                            .store_coins(int(nft_max_bid))\
+                            .store_coins(int(float(nft_max_bid) * 1e9))\
                             .store_coins(nft_step)\
                             .store_uint(int(int(nft_step_time[:-1]) * seconds_per_unit.get(nft_step_time[-1], 60*60)), 32)\
                             .store_address(Address(nft_address))\
